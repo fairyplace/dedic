@@ -1,0 +1,109 @@
+
+.tariffs{
+  margin-bottom: 120px;
+}
+.tariffs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+<<<<<<< HEAD
+=======
+.tariffs__title{
+  margin-bottom: 32px;
+}
+
+.tariffs__subtitle{
+  margin-bottom: 32px;
+}
+>>>>>>> 05ace0d (initial commit)
+.tariff-card {
+  display: flex;
+  justify-content: space-between;
+  min-height: 184px;
+  padding: 1.25em;
+  background: linear-gradient(180deg, #1c1035 -13%, #2e1e51 100%);
+  /* card blur */
+  backdrop-filter: blur(37.5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+  border: 2px solid $primary-color;
+}
+.tariff-card__name {
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+<<<<<<< HEAD
+=======
+.tariff-card__name > p{
+  font-size: 18px;
+  font-weight: 400;
+  color: $text-sec-color;
+}
+>>>>>>> 05ace0d (initial commit)
+.parameters-list li {
+  font-weight: 400;
+  font-size: 1.15em;
+  line-height: 140%;
+  margin-bottom: 8px;
+}
+.tariff-card__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tariff-card__price {
+  display: flex;
+  align-items: center;
+}
+.tariff-card__price span {
+  font-weight: 500;
+  font-size: 2em;
+  line-height: 120%;
+  margin: 0 6px;
+}
+.tariff-card__button {
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 120%;
+}
+@media (max-width: 1200px) {
+  .tariffs-container {
+    gap: 24px;
+  }
+  .tariff-card__price span{
+    font-size: 1.7em;
+  }
+  .tariff-card__name{
+    font-size: 1.2em;
+  }
+  .parameters-list li{
+    font-size: 1em;
+  }
+  .tariff-card__button {
+    font-weight: 400;
+    font-size: 1em;
+    padding: 16px 24px;
+  }
+}
+@media (max-width: 980px){
+  .tariffs-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (max-width: 515px){
+  .tariff-card {
+    flex-direction: column;
+  }
+  .tariff-card__price {
+   margin-bottom: 16px;  
+  }
+}
+@media (max-width: 475px) {
+  .tariffs__title {
+    font-size: 2rem;
+  }
+}

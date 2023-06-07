@@ -1,0 +1,114 @@
+{% set tariffs = [
+  {
+    name: 'Intel Xeon E3-1220',
+    parameters: [
+      '4 ядра',
+      '8 GB RAM, DDR3',
+      'SSD 256GB'
+    ],
+    price: '4935'
+  },
+  {
+    name: 'Intel Xeon 2x5620',
+    parameters: [
+      '8 ядер',
+      '32GB RAM, DDR3',
+      'SSD 480GB',
+      'HDD 300GB'
+    ],
+    price: '6613'
+  },
+  {
+    name: 'Intel Xeon E5-2600',
+    parameters: [
+      '(6)8 ядер',
+      '32GB RAM, DDR3',
+      'SSD 256GB',
+      'HDD 2TB'
+    ],
+    price: '7838'
+  },
+  {
+    name: 'Intel Xeon E5-2600',
+    parameters: [
+      '8 ядер',
+      '64GB RAM, DDR3',
+      '2xSSD 256GB',
+      'HDD 4TB'
+    ],
+    price: '9063'
+  },
+  {
+    name: 'Intel Xeon 2xE5-2600v2',
+    parameters: [
+      '16 ядер',
+      '128GB RAM, DDR3',
+      '2xSSD 256GB',
+      'HDD 4TB'
+    ],
+    price: '13555'
+  },
+  {
+    name: 'Intel Xeon 2xE5-2600v2',
+    parameters: [
+      '20 ядер',
+      '128GB RAM, DDR3',
+      '2xSSD 256GB',
+      'HDD 4TB'
+    ],
+    price: '16150'
+  },
+  {
+    name: 'Intel Xeon 2xE5-2600v4',
+    parameters: [
+      '20 ядер',
+      '256GB RAM, DDR4',
+      '2xSSD 512GB',
+      'HDD 8TB'
+    ],
+    price: '21866'
+  },
+  {
+    name: 'Xeon Gold',
+    parameters: [
+      '20 ядер',
+      '256 GB RAM, DDR4',
+      '2xSSD 512GB',
+      'HDD 8TB'
+    ],
+    price: '25133'
+  },
+  {
+    name: 'Xeon Gold',
+    parameters: [
+      '20 ядер',
+      '256 GB RAM, DDR4',
+      '2xSSD 1024GB',
+      'HDD 8TB'
+    ],
+    price: '34116'
+  }
+] %}
+
+<section class="tariffs">
+  <h2 class="tariffs__title">Текущие предложения</h2>
+  <p class="tariffs__subtitle subtitle">Готовы предложить условия лизинга и конфигурации под Ваши задачи</p>
+  <div class="tariffs-container">
+    {% for t in tariffs %}    
+    <div class="tariff-card">
+      <div class="tariff-card__parameters">
+        <div class="tariff-card__name"><p>Лизинг</p>{{t.name}}</div>
+        <ul class="parameters-list">
+          {% for p in t.parameters %}
+          <li>{{p}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="tariff-card__summary">
+        <div class="tariff-card__price">от <span>{{t.price}}₽</span> / месяц </div>
+        <a href="leasing-config-{{loop.index}}.html" class="tariff-card__button main-button">Заказать</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

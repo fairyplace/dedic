@@ -1,0 +1,51 @@
+.order {
+  max-width: 920px;
+  margin: 200px auto;
+  display: flex;
+  gap: 32px;
+}
+.order-config {
+  flex: 2 1 auto;
+}
+.order-form {
+  max-width: 420px;
+  flex: 1 1 auto;
+}
+.config__title {
+  margin-bottom: 32px;
+}
+.config__list{
+  margin-bottom: 40px;
+}
+.config__list li {
+  margin-bottom: 16px;
+  font-size: 1.15em;
+}
+.config__list-item span {
+  display: block;
+}
+.item__name {
+  font-weight: 500;
+  color: $text-sec-color;
+  margin-bottom: 4px;
+}
+.config__price{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.config__price strong{
+  font-size: 1.5em;
+  margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .order {
+    margin: 100px auto;
+    flex-direction: column;
+  }
+  .order-form {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+.leasing-terms {
+  max-width: 768px;
+  margin: 0 auto 120px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 1.15em;
+}
+@media (max-width: 768px) {
+  .leasing-terms {
+    font-size: 1em;
+  }
+}
+.leasing-terms__title {
+  margin-bottom: 0;
+}
+.leasing-terms__terms-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.leasing-terms li {
+  display: flex;
+  align-items: center;
+  line-height: 140%;
+}
+.leasing-terms li::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  margin-right: 9px;
+  width: 30px;
+  height: 30px;
+  background: url("@img/icons/done_mark.svg") no-repeat center;
+  background-size: contain;
+}
+.leasing-terms__guarantees-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.leasing-terms__guarantees-list li {
+  padding: 8px;
+  background-color: $el-bg-color;
+  border-radius: 8px;
+}

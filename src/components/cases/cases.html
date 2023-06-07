@@ -1,0 +1,43 @@
+{% set cases = 
+  [
+    {
+      title: "Устранили недостатки безопасности микрофинансовой компании",
+      text: "Создали новые и измененили существующие сегменты IT-архитектуры... ",
+      link: "https://vk.com/@dedic74-keis-ot-pervogo-data-centra" 
+    },
+    {
+      title: "Как мы повысили IT-безопасность одной крупной компании",
+      text: "Проведен бесплатный аудит IT-инфраструктуры компании, выявлены слабые места и устранены недостатки...",
+      link: "https://vk.com/wall-202444627_321" 
+    },
+    {
+      title: "Следствие вели с Первым Дата-Центром",
+      text: "В соседней области располагалась майнинговая ферма, успешно функционирующая на просторах крипторынка...",
+      link: "https://vk.com/wall-202444627_303" 
+    },
+    {
+      title: "Сайт упал. Лежать нельзя подняться: где поставил запятую федеральный телеканал?",
+      text: "В одно далеко не прекрасное воскресенье, нам поступил звонок от ИТ-службы известного на Южном Урале телеканала. Сайт канала не работал уже 2 суток...",
+      link: "https://vk.com/wall-202444627_348" 
+    }
+  ]
+%}
+<section class="page__cases cases">
+  <div class="cases__container">
+    <div class="case-item">
+      <h2 class="cases__block-title">Кейсы от Первого Дата Центра</h2>
+      <div class="cases__block-subtitle subtitle">Рассказываем о работе с самыми интересными и сложными случаями в нашей практике</div>
+    </div>
+    {% for case in cases %}
+      <div class="case-item" style="background-image: url('@img/cases/case_bg-{{loop.index}}.jpg');">
+        <div class="case__body">
+        <h3 class="case__title">{{case.title}}</h3>
+        <p class="case__text">{{case.text}}</p>
+        </div>
+        <a href="{{case.link}}" class="case__link main-button">
+          Читать кейс
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,156 @@
+.main-form {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 24px;
+
+  background: #2b2043;
+  border-radius: 10px;
+
+  margin-bottom: 120px;
+}
+.main-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.main-form__header p {
+  margin-bottom: 5px;
+}
+.main-form__title {
+  margin-bottom: 16px;
+}
+.main-form__subtitle {
+  font-size: 1.15em;
+  line-height: 120%;
+}
+
+.main-form__field textarea {
+  min-height: 85px;
+}
+.form-field label {
+  display: block;
+}
+.form-label {
+  color: $text-sec-color;
+  font-size: 0.85em;
+  line-height: 16px;
+}
+.form-label:focus-within {
+  color: $text-main-color;
+}
+.form-input {
+  width: 100%;
+  font-size: 16px;
+  line-height: 125%;
+
+  padding: 12px 0 12px 0;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid $text-sec-color;
+  outline: none;
+  resize: none;
+  color: rgb(255, 255, 255);
+}
+.form-input:focus {
+  border-color: $text-main-color;
+}
+// Agreement component
+.form-agreement {
+  font-size: 0.85em;
+  line-height: 140%;
+  color: $text-third-color;
+  text-align: center;
+}
+.form-agreement a {
+  text-decoration: underline;
+  color: $text-main-color;
+}
+
+// Form button component
+
+.form-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1em 2.2em;
+  background: linear-gradient(225deg, hsla(243, 69%, 66%, 1) 0%, rgb(103, 118, 215) 51%, hsla(273, 44%, 54%, 1) 100%);
+
+  background-size: 200% 200%;
+  border-radius: 5px;
+  color: $text-main-color;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.form-button:hover{
+  background-position: 100% 50%;
+}
+.main-form__service-select {
+  display: flex;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+// Checkbox component
+
+.form-check__input {
+  appearance: none;
+  opacity: 0;
+}
+.check-box-container {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 25px;
+  border-radius: 50px;
+  border: 1px solid #685a84;
+  background-color: $el-bg-color;
+
+  user-select: none;
+}
+.check-box-container:focus-within {
+  border: 1px solid #a38cd3;
+}
+.form-check {
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.form-check__box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #5e4b85;
+}
+
+.form-check__box::after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.57px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #a38cd3;
+  border-radius: 50%;
+  background-image: url("@img/icons/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(0);
+}
+
+.form-check__input:checked + .form-check__box::after {
+  transform: scale(1);
+}

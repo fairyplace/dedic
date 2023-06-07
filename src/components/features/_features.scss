@@ -1,0 +1,109 @@
+.features {
+  margin-bottom: calc(90px + 130px);
+}
+.features__title {
+  text-align: center;
+  margin-bottom: calc(60px + 130px);
+}
+.features__cards-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  column-gap: 40px;
+  row-gap: 70px;
+
+  background-image: url("@img/features/features-logo.svg");
+  background-position-x: center;
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+
+  .card {
+    height: fit-content;
+    padding: 0px 24px 24px 24px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(58, 44, 86, 0) -13.01%, rgba(110, 83, 165, 0.1) 100%);
+    backdrop-filter: blur(13.5px);
+
+    transition: all 0.2s;
+  }
+  @media (min-width: 1024px) {
+    .features-card:hover {
+<<<<<<< HEAD
+      box-shadow: 0px 0px 25px 0px rgba(112, 109, 230, 0.25);
+      scale: 1.01;
+=======
+      box-shadow: 0px 0px 25px 0px rgba(112, 109, 230, 0.4);
+      transform: scale(1.03);
+>>>>>>> 05ace0d (initial commit)
+    }
+  }
+  .card:nth-child(1),
+  .card:nth-child(3) {
+    align-self: self-end;
+  }
+  .card:nth-child(2) {
+    transform: translateY(-130px);
+  }
+  .card:nth-child(5) {
+    transform: translateY(130px);
+  }
+  .card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .card__title {
+    font-size: 1em;
+    overflow-wrap: break-word;
+    margin-right: 8px;
+    max-width: 196px;
+  }
+}
+@media (max-width: 1024px) {
+  .features {
+    margin-bottom: 90px;
+  }
+  .features__cards-container {
+    background-image: none;
+    .card:nth-child(1),
+    .card:nth-child(3) {
+      align-self: initial;
+    }
+    .card:nth-child(2),
+    .card:nth-child(5) {
+      transform: none;
+    }
+    .card {
+      height: auto;
+    }
+    .card__title {
+      max-width: fit-content;
+      font-size: 1.1em;
+    }
+    gap: 15px;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+  .features__title {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .features__cards-container {
+      grid-template-columns: minmax(280px, 1fr);
+      .card {
+        padding: 16px 16px 16px 16px;
+      }
+    }
+  }
+  @media (max-width: 475px) {
+    .features__cards-container {
+      .card__image img {
+        width: 50px;
+      }
+    }
+  }
+}

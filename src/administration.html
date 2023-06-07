@@ -1,0 +1,220 @@
+{% set adventagesCards = [
+  {
+    title: 'Расширение каналов связи',
+    text: 'С каждым сервером предоставляется канал 100Мбит/с, но многим клиентам этого мало, а подключать 1Гбит/с — не всем по карману, поэтому мы предлагаем тарифы на 200 - 500 Мбит/с, которые позволяют расширять каналы по мере необходимости и непереплачивать.'
+  },
+  {
+    title: 'Быстрая выгрузка данных',
+    text: 'При необходимости выгрузки\загрузки большого количества данных до вашего сервера, вы всегда сможете подъехать к нам в офис с вашим хдд\ссд и осуществить необходимый обмен на скорости до 25гбит  '
+  },
+  {
+    title: 'Собственный сервисный центр',
+    text: 'Большой зип серверного инвентаря в наличии! В случае поломки компонента сервера, мы всегда сможем оперативно заменить его на идентичный, без необходимости длительных ожиданий поставки.'
+  },
+  {
+    title: 'Максимальная защита от рисков',
+    text: 'Максимальный уровень защищенности от рисков любого уровня ( двойное независимое резервирование питания на надежных литиевых АКБ, ДГУ, несколько АПлинков в мир с собственной автономной системой адресации, круглосуточный мониторинг всех инженерных систем.'
+  },
+  {
+    title: 'Аудит объектов IT-инфраструктуры',
+    text: 'Мы производим комплексное обследование техническое оснащение (диагностика компьютерного оснащения и анализ состояния кабелей); ПО (аудит прикладных, серверных и пользовательски'
+  }
+] %}
+
+{% set onceServices = [
+  {
+    name: "Установка, настройка операционной системы",
+    price: "1500"
+  },
+  {
+    name: "Установка, обновление, настройка ПО",
+    price: "300"
+  },
+  {
+    name: "Работа с KVM-консолью согласно ТЗ",
+    price: "300"
+  },
+  {
+    name: "Настройка резервного копирования",
+    price: "1500"
+  },
+  {
+    name: "Настройка антивирусов, файерволов, брандмауэров",
+    price: "1500"
+  },
+  {
+    name: "Предоставление VLAN",
+    price: "1500"
+  },
+  {
+    name: "Пакет услуг Smart Hands",
+    price: "9500"
+  },
+  {
+    name: "Предоставление VLAN",
+    price: "500"
+  }] %}
+
+{% set extraServices = [
+  {
+    name: "Мониторинг доступности",
+    price: "1000"
+  },
+  {
+    name: "Выделенный канал до 100 Гбит\с",
+    price: "5000"
+  },
+  {
+    name: "Резервное копирование (Backup)",
+    price: "500"
+  },
+  {
+    name: "Дополнительный адрес IPv4/ IPv6",
+    price: "200"
+  },
+  {
+    name: "Пакет услуг Smart Hands",
+    price: "1000"
+  },
+  {
+    name: "Дополнительный адрес IPv4/ IPv6",
+    price: "200"
+  },
+  {
+    name: "Пакет услуг Smart Hands",
+    price: "9500"
+  },
+  {
+    name: "Предоставление VLAN",
+    price: "500"
+  }] %}
+<!DOCTYPE html>
+<html lang="ru">
+  {% set pageTitle = 'Администрирование и сервис | Первый Дата-Центр' %}
+<<<<<<< HEAD
+  {% include 'components/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include 'components/header/header.html' %}
+=======
+  {% include 'common/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include 'common/header/header.html' %}
+>>>>>>> 05ace0d (initial commit)
+      <main>
+        <div class="container">
+          {% set heroContent = {
+            title: 'Администрирование и сервис',
+            subtitle: 'Берём на себя заботу и обслуживание сервера, позволяя Вам сфокусироваться на бизнес задачах.',
+            image: '@img/image/colocation_img.svg',
+            goto:'.ext-services',
+            linkText: 'К ценам'
+          } %}
+          {% include 'components/service-hero/service-hero.html' %}
+          <div class="service-adventages">
+            {% for card in adventagesCards %}
+              <div class="adventages-card">
+                <h3 class="adventages-card__title">
+                  {{ card.title }}
+                </h3>
+                <p class="adventages-card__text">
+                  {{ card.text }}
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="ext-services">
+            <h2>Цены на дополнительные услуги</h2>
+            <ul class="additional-services__list">
+              {% for service in extraServices %}
+                <li class="service__item">
+                  <span class="service__name">{{ service.name }}</span>
+                  <span class="service__price">от
+                    <strong>{{ service.price }}</strong>
+                    ₽ / мес.</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="once-services">
+            <h2 class='title'>Цены на разовые работы</h2>
+            <ul class="additional-services__list">
+              {% for service in onceServices %}
+                <li class="service__item">
+                  <span class="service__name">{{ service.name }}</span>
+                  <span class="service__price">от
+                    <strong>{{ service.price }}</strong>
+                    ₽ / мес.</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+<<<<<<< HEAD
+          <form class="main-form">
+            <div class="main-form__content">
+              <div class="main-form__header">
+                <h3 class="main-form__title">Свяжитесь с нами</h3>
+=======
+          <form class="form main-form">
+            <div class="main-form__content form__content">
+              <div class="main-form__header">
+                <h3 class="main-form__title">Свяжитесь с нами</h3>
+                <div class="main-form__subtitle">
+                  <p>Хотите задать вопрос?</p>
+                  <p>Получить коммерческое предложение?</p>
+                  <p>Уточнить конфигурацию?</p>
+                </div>
+>>>>>>> 05ace0d (initial commit)
+              </div>
+              <div class="main-form__field form-field">
+                <label for="name-input" class="main-form__label form-label">
+                  Ваше имя <input type="text" id="name-input" class="main-form__input form-input _req"/>
+                </label>
+              </div>
+              <div class="main-form__field form-field">
+                <label for="tel-input" class="main-form__label form-label">
+                  Ваш номер телефона <input type="tel" id="tel-input" class="main-form__input form-input _req"/>
+                </label>
+              </div>
+<<<<<<< HEAD
+
+          
+              <div class="main-form__field form-field">
+                <label for="form-message" class="main-form__label form-label">
+                  Сообщение (необязательно)
+=======
+              <div class="main-form__field form-field">
+                <label for="form-message" class="main-form__label form-label">
+                  Напишите вопрос, описание проекта
+>>>>>>> 05ace0d (initial commit)
+                  <textarea class="main-form__input form-input _req" id="form-message" value='fff'></textarea>
+                </label>
+              </div>
+
+              <div class="main-form__agreement form-agreement">
+                <span class="form-agreement__text">
+                  Отправляя заявку, вы соглашаетесь с
+<<<<<<< HEAD
+                  <a href="privacy.html">Политикой конфиденциальности</a>
+=======
+                  <a href="privacy.html">Политикой конфиденциальности</a>
+>>>>>>> 05ace0d (initial commit)
+                </span>
+              </div>
+              <button class="main-form__submit form-button">Отправить заявку</button>
+            </div>
+          </form>
+        </div>
+      </main>
+<<<<<<< HEAD
+      {% include 'components/footer/footer.html' %}
+    </div>
+    {% include 'components/script.html' %}
+=======
+      {% include 'common/footer/footer.html' %}
+    </div>
+    {% include 'common/script.html' %}
+>>>>>>> 05ace0d (initial commit)
+  </body>
+</html>

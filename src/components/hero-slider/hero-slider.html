@@ -1,0 +1,61 @@
+<!-- поле "image" — От корневой директории img -->
+{% set slides = 
+  [
+    {
+      title: "Аренда сервера для бизнеса",
+      text: "Конфигурации для любых задач",
+      image: "rent_img.png",
+      link: 'rent.html'
+    },
+    {
+<<<<<<< HEAD
+      title: "Размещение сервера для бизнеса",
+      text: "Colocation в нашем современном дата-центре от 3500₽/мес",
+=======
+      title: "Размещение серверного оборудования",
+      text: "Colocation в современном Дата - Центре",
+>>>>>>> 05ace0d (initial commit)
+      image: "colocation_img.png",
+      link: 'colocation.html'
+    },
+    {
+<<<<<<< HEAD
+      title: "Лизинг сервера для бизнеса",
+      text: "Покупка оборудования в лизинг на выгодных условиях",
+=======
+      title: "Сервер в лизинг",
+      text: "Приобретение серверного оборудования в лизинг на выгодных условиях",
+>>>>>>> 05ace0d (initial commit)
+      image: "leasing_img.png",
+      link: 'leasing.html'
+    }
+  ]
+%}
+<div class="swiper hero-slider">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {% for slide in slides %}
+      <div class="swiper-slide slide">
+        <div class="slide__body">
+          <h1 class="slide__title">{{ slide.title }}</h1>
+          <p class="slide__text">{{ slide.text }}</p>
+          <a href="{{slide.link}}" class="slide__button main-button">Подробнее</a>
+        </div>
+        <div class="slide__image">
+          <img src="@img/{{ slide.image }}" alt="rent-image">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="slider__controls">
+    <div class="slider__pagination"></div>
+    <div class="controls__navigation">
+      <span class="navigation__button navigation-button-prev">
+        <img src="@img/icons/slider-nav-btn.svg" alt="Кнопка предыдущий слайд"/>
+      </span>
+      <span class="navigation__button navigation-button-next">
+        <img src="@img/icons/slider-nav-btn.svg" alt="Кнопка следующий слайд"/>
+      </span>
+    </div>
+  </div>
+</div>

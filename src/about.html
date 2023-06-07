@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  {% set pageTitle = 'О компании | Первый Дата-Центр' %}
+<<<<<<< HEAD
+  {% include 'components/head.html'%}
+  <body>
+    <div class="wrapper">
+      {% include 'components/header/header.html'%}
+=======
+  {% include 'common/head.html'%}
+  <body>
+    <div class="wrapper">
+      {% include 'common/header/header.html'%}
+>>>>>>> 05ace0d (initial commit)
+      <main>
+        <div class="container">
+          <br> <br> <br> <br> <br> <br> {% include 'components/features/features.html' %}
+        </div>
+<<<<<<< HEAD
+        {% include 'components/categories/categories.html' %}
+=======
+>>>>>>> 05ace0d (initial commit)
+        {% include 'components/gallery/__photo/gallery__photo.html' %}
+        <div class="container">
+          {% include 'components/cases/cases.html' %}
+        </div>
+        {% include 'components/gallery/__clients/gallery__clients.html' %}
+        <div class="container">
+<<<<<<< HEAD
+          {% include 'components/main-form/main-form.html' %}
+          {% include 'components/contacts/contacts.html' %}
+        </div>
+      </main>
+      {% include 'components/footer/footer.html' %}
+    </div>
+    {% include 'components/script.html' %}
+=======
+          {% include 'components/form/__main/form__main.html' %}
+          {% include 'components/contacts/contacts.html' %}
+        </div>
+      </main>
+      {% include 'common/footer/footer.html' %}
+    </div>
+    {% include 'common/script.html' %}
+>>>>>>> 05ace0d (initial commit)
+  </body>
+</html>

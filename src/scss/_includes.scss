@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+@import '../components/header/header';
+@import '../components/footer/footer';
+=======
+@import '../common/header/header';
+@import '../common/footer/footer';
+>>>>>>> 05ace0d (initial commit)
+// main page
+@import '../components/hero-slider/hero-slider';
+@import '../components/main-button/main-button';
+@import '../components/adventages/adventages';
+@import '../components/service-cards/service-cards';
+@import '../components/features/features';
+@import '../components/gallery/gallery';
+@import '../components/categories/categories';
+@import '../components/cases/cases';
+<<<<<<< HEAD
+@import '../components/main-form/main-form';
+@import '../components/contacts/contacts';
+=======
+@import '../components/form/form.scss';
+@import '../components/contacts/contacts';
+//templates
+@import '../templates/order-page/order-page';
+@import '../templates/service-page/service-page';
+>>>>>>> 05ace0d (initial commit)
+//internal pages
+@import '../components/service-hero/service-hero';
+@import '../components/stepper/stepper';
+@import '../components/extra-services/extra-services';
+@import '../components/service-options/service-options';
+  // rent page
+  @import '../components/tariff-cards/__rent/tariff-cards__rent';
+  // colocation page
+  @import '../components/tariff-cards/__colocation/tariff-cards__colocation';
+  //administration
+  @import '../components/adventages-cards/adventages-cards';
+
+// privacy
+@import '../components/privacy/privacy';

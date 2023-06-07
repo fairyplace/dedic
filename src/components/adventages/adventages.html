@@ -1,0 +1,33 @@
+{% set items = 
+  [
+    {
+      title: "Уровень защиты Tier III",
+      text: "Надежность наших серверов соотвествует международным стандартам."
+    },
+    {
+      title: "Бесплатный монтаж сервера",
+      text: "Квалифицированный монтаж вашего сервера в дата-центре производится
+				бесплатно!"
+    },
+    {
+      title: "Бесплатное обслуживание",
+      text: "Минимальный пакет услуг обслуживания Вашего оборудования предоставляется
+				бесплатно!"
+    },
+    {
+      title: "Круглосуточная поддержка",
+      text: "Ответственный мониторинг и толковая тех. поддержка в круглосуточном
+				режиме."
+    }
+  ]
+%}
+<div class="page__adventages adventages">
+	<div class="adventages__container container">
+    {% for item in items %}
+		  <div class="adventages__item">
+		  	<div class="adventages__title">{{ item.title }}</div>
+		  	<div class="adventages__text">{{ item.text }}</div>
+		  </div>
+    {% endfor %}
+	</div>
+</div>

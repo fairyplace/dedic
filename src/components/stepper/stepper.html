@@ -1,0 +1,50 @@
+<section class="stepper">
+  <div class="stepper__container">
+    <div class="stepper__left">
+      <h2 class="stepper__title">{{stepper.title}}</h2>
+      <p class="stepper__subtitle subtitle">{{stepper.subtitle}}</p>
+      {# <div class="stepper__img">
+        <img src="@img/units.png" alt="Изображение частей сервера">
+      </div> #}
+    </div>
+    <div class="stepper__right">
+      <ul class="stepper-list">
+<<<<<<< HEAD
+        <li class="stepper-item">
+
+          <div class="stepper-item__text">
+            <strong>Отправьте заявку</strong>
+            <p>Заполните форму с заявкой на аренду сервера, укажите все параметры и отправьте её нам.</p>
+          </div>
+
+        </li>
+        <li class="stepper-item">
+
+          <div class="stepper-item__text">
+            <strong>Подпишите договор и оплатите счет</strong>
+            <p>Заполним и вышлем договор на согласование.</p>
+          </div>
+
+        </li>
+        <li class="stepper-item">
+
+          <div class="stepper-item__text">
+            <strong>Сервер в Вашем распоряжении</strong>
+            <p>Вы можете исопользовать все возможности тарифа и подключить дополнительные услуги, написать в поддержку</p>
+          </div>
+
+        </li>
+=======
+        {% for step in steps %}
+          <li class="stepper-item">
+            <div class="stepper-item__text">
+              <strong>{{ step.title }}</strong>
+              <p>{{ step.text }}</p>
+            </div>
+          </li>
+        {% endfor %}  
+>>>>>>> 05ace0d (initial commit)
+      </ul>
+    </div>
+  </div>
+</section>

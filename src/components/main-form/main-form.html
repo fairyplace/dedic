@@ -1,0 +1,59 @@
+<form class="main-form">
+  <div class="main-form__content">
+    <div class="main-form__header">
+      <h3 class="main-form__title">Свяжитесь с нами</h3>
+      <div class="main-form__subtitle">
+        <p>Хотите задать вопрос?</p>
+        <p>Получить коммерческое предложение?</p>
+        <p>Уточнить конфигурацию?</p>
+      </div>
+    </div>
+    <div class="main-form__field form-field">
+      <label for="name-input" class="main-form__label form-label">
+        Ваше имя <input type="text" id="name-input" class="main-form__input form-input _req"/>
+      </label>
+    </div>
+    <div class="main-form__field form-field">
+      <label for="tel-input" class="main-form__label form-label">
+        Ваш номер телефона <input type="tel" id="tel-input" class="main-form__input form-input _req"/>
+      </label>
+    </div>
+    <div class="main-form__field form-field">
+      <label for="form-message" class="main-form__label form-label">
+        Какая услуга Вас интересует?
+      </label>
+      <div class="main-form__service-select">
+        <div class="check-box-container">
+          <label class="main-form__check form-check">
+            <input class="form-check__input" type="checkbox"/>
+            <span class="form-check__box"></span>Аренда</label>
+        </div>
+        <div class="check-box-container">
+          <label class="main-form__check form-check">
+            <input class="form-check__input" type="checkbox"/>
+            <span class="form-check__box"></span>Размещение</label>
+        </div>
+        <div class="check-box-container">
+          <label class="main-form__check form-check">
+            <input class="form-check__input" type="checkbox"/>
+            <span class="form-check__box"></span>Другое</label>
+        </div>
+      </div>
+
+    </div>
+    <div class="main-form__field form-field">
+      <label for="form-message" class="main-form__label form-label">
+        Напишите вопрос, описание проекта
+        <textarea class="main-form__input form-input _req" id="form-message" value='fff'></textarea>
+      </label>
+    </div>
+
+    <div class="main-form__agreement form-agreement">
+      <span class="form-agreement__text">
+        Отправляя заявку, вы соглашаетесь с
+        <a href="privacy.html">Политикой конфиденциальности</a>
+      </span>
+    </div>
+    <button class="main-form__submit form-button">Отправить заявку</button>
+  </div>
+</form>

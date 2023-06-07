@@ -1,0 +1,19 @@
+
+{% set pageTitle = 'Аренда сервера Xeon Gold | Первый Дата-Центр' %}
+{% set configTitle = 'Аренда сервера Xeon Gold' %}
+{% set params = [
+  {
+    name: 'CPU',
+    value: 'Intel Xeon Gold, 20 ядер'
+  },
+  {
+    name: 'RAM',
+    value: '256GB RAM, DDR4'
+  },
+  {
+    name: 'Диски',
+    value: '2xSSD 512GB, HDD 8TB'
+  }
+] %}
+{% set price = '29000' %}
+{% extends 'templates/order-page/order-page.html' %}

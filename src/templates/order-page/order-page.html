@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  {% include 'common/head.html' %}
+  <body>
+    <script>
+      const configData = {
+        title: '{{configTitle}}',
+        {% for p in params %}
+          {{ p.name }}: '{{ p.value }}',
+        {% endfor %}
+        price: '{{ price }}'
+      }
+    </script>
+    <div class="wrapper">
+      {% include 'common/header/header.html' %}
+      <main class="page">
+        <div class="container">
+          <div class="order">
+            <div class="order-config">
+              <h3 class="config__title">{{configTitle}}</h3>
+              <ul class="config__list">
+                  {% for p in params %}
+                    <li class="config__list-item">
+                      <span class="item__name"> {{ p.name }}</span>
+                      <span class="item__value">{{ p.value }}</span>
+                    </li>
+                  {% endfor %}
+              </ul>
+              <h4 class='config__price'>от <strong>{{ price }}₽</strong> / месяц</h4>
+            </div>
+            {% include '../../components/form/__order/form__order.html'%}
+          </div>
+        </div>
+      </main>
+      {% include 'common/footer/footer.html' %}
+    </div>
+    {% include 'common/script.html' %}
+  </body>
+</html>

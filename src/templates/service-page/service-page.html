@@ -1,0 +1,19 @@
+{% import '../../data/service-page-data.html' as data %}
+<!DOCTYPE html>
+<html lang="ru">
+  {% include '../../common/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include '../../common/header/header.html'%}
+      <main class="service-page">
+        <div class="container">
+          {% block servicePageContent %}
+          <h1 style='margin: 50vh auto;'>Тут пока ничего нет, но скоро появится :)</h1>
+          {% endblock servicePageContent %}
+        </div>
+      </main>
+      {% include '../../common/footer/footer.html'%}
+    </div>
+    {% include '../../common/script.html'%}
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.service-adventages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  margin-bottom: 120px;
+}
+.adventages-card {
+  flex: 1 1  420px;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: $el-bg-color;
+}
+.adventages-card__title {
+  // margin-bottom: 32px;
+}
+
+.adventages-card__title:after {
+  content: "";
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 2px;
+  width: 100%;
+  background-color: $sec-color;
+}
+.adventages-card__text {
+  font-size: 1.15em;
+  line-height: 140%;
+}
+@media (max-width: 1024px) {
+  .adventages-card__title {
+    font-size: 1.5em;
+  }
+  .adventages-card__text {
+    font-size: 1em;
+  }
+}
+
+
+.ext-services{
+  margin-bottom: 120px;
+}
+.once-services{
+  margin-bottom: 120px;
+}

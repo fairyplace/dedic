@@ -1,0 +1,9 @@
+.ico {
+  filter: brightness(1.8) saturate(0);
+  transition: all 0.1s;
+}
+@media (min-width: 1024px) {
+  .ico:hover {
+    filter: none;
+  }
+}

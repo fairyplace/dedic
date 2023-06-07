@@ -1,0 +1,23 @@
+<div class="additional-services">
+  <div class="additional-services__text">
+    <h2 class="additional-services__title">Дополнительные услуги</h2>
+    <div class="additional-services__subtitle subtitle">
+<<<<<<< HEAD
+      Сопроводим Ваш проект, поможем с содержанием сервера и даже отремонтируем
+    </div>
+    <div class="additional-services__img">
+      <img src="@img/server_laptop.svg" alt="Изображение серверного ноутбука">
+=======
+        Полное сопровождение Вашего проекта, профессиональное администрирование сервера, качественный и оперативный ремонт оборудования 
+>>>>>>> 05ace0d (initial commit)
+    </div>
+  </div>
+  <ul class="additional-services__list">
+      {% for service in services %}
+        <li class="service__item">
+          <span class="service__name">{{ service.name }}</span>
+          <span class="service__price">от <strong>{{ service.price }}</strong> ₽ / мес.</span>
+        </li>
+      {% endfor %}
+  </ul>
+</div>

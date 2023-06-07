@@ -1,0 +1,72 @@
+.colocation-tariffs-container {
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.colocation-tariff-card {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: linear-gradient(180deg, #1c1035 -13.01%, #2e1e51 100%);
+
+  backdrop-filter: blur(37.5px);
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+
+  .tariff-card__button {
+    margin-top: auto;
+  }
+}
+<<<<<<< HEAD
+.colocation-tariff-card__parameters {
+}
+=======
+>>>>>>> 05ace0d (initial commit)
+.colocation-tariff-card__size > span {
+  display: block;
+  color: $text-sec-color;
+  margin-bottom: 16px;
+}
+.colocation-tariff-card__units {
+  display: flex;
+  align-items: center;
+}
+.colocation-tariff-card__units > span {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 110%;
+}
+.colocation-tariff-card__units > img {
+  margin-right: 16px;
+}
+<<<<<<< HEAD
+.tariff-card__price {
+}
+=======
+>>>>>>> 05ace0d (initial commit)
+.colocation-parameters-list li{
+  display: flex; 
+  align-items: center;
+  margin-bottom: 16px;
+}
+.colocation-parameters-list li:before{
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  margin-right: 9px;
+  width: 30px;
+  height: 30px;
+  background: url("@img/icons/done_mark.svg") no-repeat center;
+  background-size: auto;
+  background-size: contain;
+<<<<<<< HEAD
+}
+
+.main-button {
+}
+=======
+}
+>>>>>>> 05ace0d (initial commit)

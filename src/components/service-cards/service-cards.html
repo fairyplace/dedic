@@ -1,0 +1,108 @@
+{% set cards = 
+  [
+    {
+      title: "Аренда сервера",
+      price: "4800",
+      features: [
+        "Современные комплектующие",
+        "Большой выбор конфигураций",
+<<<<<<< HEAD
+        "Широкий пакет тарифов",
+=======
+>>>>>>> 05ace0d (initial commit)
+        "Демо-период до 90 дней*"
+      ],
+      link: 'rent.html'
+    },
+    {
+      title: "Размещение сервера",
+      price: "3500",
+      features: [
+        "Бесплатный переезд",
+        "Оперативное включение",
+        "Постоянный высокоскоростной доступ",
+        "Гарантия стабильной работы оборудования"
+      ],
+      link: 'colocation.html'
+    },
+    {
+<<<<<<< HEAD
+      title: "Лизинг сервера",
+=======
+      title: "Сервер в лизинг",
+>>>>>>> 05ace0d (initial commit)
+      price: "4935",
+      features: [
+        "Без первоначального взноса",
+        "Минимальный пакет документов",
+        "Ставка удорожания 7,5% в год",
+        "Возможность досрочного выкупа"
+      ],
+      link: 'leasing.html'
+    },
+    {
+      title: "Поставка серверного оборудования",
+      price: "4800",
+      features: [
+<<<<<<< HEAD
+        "Безопасная транспортировка",
+        "Быстрая установка"
+=======
+        "Оптимальные цены",
+        "Быстрая установка",
+        "Контроль качества оборудования"
+
+>>>>>>> 05ace0d (initial commit)
+      ],
+      link: 'supply.html'
+    },
+    {
+      title: "Ремонт серверного оборудования",
+      price: "3500",
+      features: [
+        "Квалифицированные специалисты",
+<<<<<<< HEAD
+        "Бесплатная диагностика"
+=======
+        "Бесплатная диагностика",
+        "Гарантия на проведённые работы"
+>>>>>>> 05ace0d (initial commit)
+      ],
+      link: 'repair.html'
+    },
+    {
+      title: "Администрирование и сервис",
+      price: "1500",
+      features: [
+<<<<<<< HEAD
+        "Качественное обслуживание Вашего сервера ",
+        "Быстрая замена комплектующих",
+        "Инсталяция"
+=======
+        "Качественное обслуживание и ремонт Вашего сервера ",
+        "Оперативное изменение конфигурации",
+        "Инсталляция и сервис"
+>>>>>>> 05ace0d (initial commit)
+      ],
+      link: 'administration.html'
+    }
+  ]
+%}
+<section class="page__services services">
+  <h2 class="services__title">Наши услуги</h2>
+  <div class="services__cards">
+    {% for card in cards %}
+      <div class="services__card card">
+        <h3 class="card__title">{{card.title}}</h3>
+        <div class="card__price">от<span>{{card.price}}₽</span>/ месяц </div>
+        <span class="card__divider"></span>
+        <ul class="card__features">
+          {% for i in card.features %}
+            <li>{{ i }}</li>
+          {% endfor %}
+        </ul>
+        <a href="{{card.link}}" class="card__button main-button">Подробнее</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

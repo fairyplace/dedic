@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  {% set pageTitle = 'Поставка серверного оборудования | Первый Дата-Центр' %}
+<<<<<<< HEAD
+  {% include 'components/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include 'components/header/header.html' %}
+=======
+  {% include 'common/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include 'common/header/header.html' %}
+>>>>>>> 05ace0d (initial commit)
+      <main>
+        <div class="container">
+          {% set heroContent = {
+            title: 'Поставка серверного оборудования',
+            subtitle: 'Быстрая и безопасная перевозка вашего оборудования прямо в дата-центр',
+            image: '',
+            goto:'.ext-services',
+            linkText: 'К ценам'
+          } %}
+          {% include 'components/service-hero/service-hero.html' %}
+        </div>
+      </main>
+<<<<<<< HEAD
+      {% include 'components/footer/footer.html' %}
+    </div>
+    {% include 'components/script.html' %}
+=======
+      {% include 'common/footer/footer.html' %}
+    </div>
+    {% include 'common/script.html' %}
+>>>>>>> 05ace0d (initial commit)
+  </body>
+</html>

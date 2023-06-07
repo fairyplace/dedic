@@ -1,0 +1,32 @@
+.page__adventages {
+  margin: 0px 0px 120px 0px;
+}
+.adventages__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: $el-bg-color;
+  padding: 24px;
+  border-radius: 10px;
+}
+.adventages__item {
+  flex: 1 1 280px;
+}
+.adventages__title {
+  font-weight: 500;
+  line-height: 120%;
+}
+.adventages__title::after {
+  content: "";
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  height: 1px;
+  width: 100%;
+  background-color: $sec-color;
+}
+@media (max-width: 1024px) {
+  .adventages__container {
+    flex-wrap: wrap;
+  }
+}

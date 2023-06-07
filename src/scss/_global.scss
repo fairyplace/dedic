@@ -1,0 +1,133 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: $main-bg-color;
+  color: $text-main-color;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  height: 100%;
+  counter-reset: number;
+}
+body._scroll-lock {
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+footer {
+  flex: 0 0 auto;
+}
+.container {
+<<<<<<< HEAD
+  max-width: calc(84.25rem + 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+=======
+  max-width: calc(84.25rem + 60px);
+  margin: 0 auto;
+  padding: 0 30px;
+}
+@media (max-width: 628px) {
+  .container{
+    max-width: calc(84.25rem + 30px);
+    padding: 0 15px;
+  }
+}
+>>>>>>> 05ace0d (initial commit)
+h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  // font-size: 56px;
+  font-size: 3.5rem;
+  line-height: 110%;
+}
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  // font-size: 48px;
+  font-size: 2.6rem;
+  line-height: 120%;
+  margin-bottom: 60px;
+}
+.subtitle {
+<<<<<<< HEAD
+  font-size: 1.5rem;
+  font-weight: 500;
+=======
+  font-size: 1.4rem;
+  font-weight: 400;
+>>>>>>> 05ace0d (initial commit)
+  line-height: 120%;
+}
+h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  // font-size: 32px;
+  font-size: 2rem;
+  line-height: 120%;
+}
+h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  // font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+h5 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  // font-size: 18px;
+  font-size: 1.15rem;
+  line-height: 120%;
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 05ace0d (initial commit)
+strong {
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+  }
+  .subtitle {
+<<<<<<< HEAD
+    font-size: 1.2rem;
+=======
+    font-size: 1.1rem;
+>>>>>>> 05ace0d (initial commit)
+  }
+}
+
+@media (max-width: 425px) {
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+  .subtitle {
+<<<<<<< HEAD
+    font-size: 1.15rem;
+=======
+    font-size: 1rem;
+>>>>>>> 05ace0d (initial commit)
+  }
+}

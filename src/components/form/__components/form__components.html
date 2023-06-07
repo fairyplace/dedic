@@ -1,0 +1,81 @@
+{% macro input_field(
+  label = 'Поле для ввода',
+  type="text",
+  name,
+  required,
+  addAttr
+) %}
+  <div class="form-field">
+    <label class="main-form__label form-label">
+      {{ label }}
+      {% if required %}
+        <span>*</span>
+      {% endif %}
+      <input  type="{{ type }}" class="main-form__input form-input" name="{{ name }}" {{ required }} {{ addAttr }} />
+    </label>
+  </div>
+{% endmacro %}
+
+{% macro textarea_field(
+  label = 'Поле для текста',
+  name, 
+  required,
+  maxlength,
+  addAttr
+) %}
+  <div class="form-field">
+    <label for="form-message" class="main-form__label form-label">
+      {{ label }}
+      {% if required %}
+        <span>*</span>
+      {% endif %}
+      <textarea id="form-message" class="main-form__input form-input _req" name="{{ name }}" maxlength="{{ maxlength }}" {{ required }}></textarea>
+    </label>
+  </div>
+{% endmacro %}
+
+{% macro check_field(label = 'Выберите варианты', options) %}
+  <div class="form-field">
+    <label class="main-form__label form-label">
+      {{ label }}
+    </label>
+    <div class="main-form__service-select">
+      {% for option in options %}
+        <div class="check-box-container">
+          <label class="main-form__check form-check">
+            <input class="form-check__input" type="checkbox" name="{{ option.name }}"/>
+            <span class="form-check__box"></span>
+            {{ option.label }}
+          </label>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro privacy_terms() %}
+  <div class="main-form__agreement form-agreement">
+    <span class="form-agreement__text">
+      Отправляя заявку, вы соглашаетесь с
+      <a href="privacy.html">Политикой конфиденциальности</a>
+    </span>
+  </div>
+{% endmacro %}
+
+{% macro form_modal(title, message, id) %}
+  <div class="form-modal modal" id="{{id}}">
+    <div class="form-modal__body modal-body">
+      <h3 class="form-modal__title">
+        {{ title }}
+      </h3>
+      <div class="form-modal__message">
+        {{ message }}
+      </div>
+      <a class="form-modal__button main-button modal__close-btn">Ок</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro submit_button() %}
+    <button class="main-form__submit form-button disabled">Отправить заявку</button>
+{% endmacro %}

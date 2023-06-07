@@ -1,0 +1,129 @@
+{% set clients = [
+{
+<<<<<<< HEAD
+=======
+  name: 'Радио DFM',
+  image: 'dfm.jpg',
+  link: 'https://dfm.ru/'
+},
+{
+>>>>>>> 05ace0d (initial commit)
+  name: 'Ак Барс Банк',
+  image:'ak-bars-bank.jpg',
+  link: 'https://www.akbars.ru/'
+},
+{
+<<<<<<< HEAD
+  name: 'Альпина',
+  image: 'alpina.jpg',
+  link: 'https://www.alpinashop.ru/'
+},
+{
+=======
+>>>>>>> 05ace0d (initial commit)
+  name: 'Восток Лада',
+  image: 'vostok-lada.jpg',
+  link: 'https://vostok.lada.ru/'
+},
+{
+<<<<<<< HEAD
+  name: 'Равис',
+  image: 'ravis.jpg',
+  link: 'https://ravisagro.ru/'
+=======
+  name: 'Завод промышленного оборудования',
+  image: 'zpo.jpg',
+  link: 'https://zpo.ru/'
+},
+{
+  name: 'Радиотехнические системы',
+  image: 'rtc.jpg',
+  link: 'https://www.nports.ru/#!/'
+},
+{
+  name: '31 канал',
+  image: '31chanel.jpg',
+  link: 'https://31tv.ru/'
+},
+{
+  name: 'Альпина',
+  image: 'alpina.jpg',
+  link: 'https://www.alpinashop.ru/'
+>>>>>>> 05ace0d (initial commit)
+},
+{
+  name: 'Росгвардия',
+  image: 'rosgvardiya.jpg',
+  link: 'https://fgup-ohrana.ru/'
+},
+{
+  name: 'Цефей',
+  image: 'cephey.jpg',
+  link: 'https://cephey.ru/'
+},
+<<<<<<< HEAD
+=======
+
+{
+  name: 'Равис',
+  image: 'ravis.jpg',
+  link: 'https://ravisagro.ru/'
+},
+>>>>>>> 05ace0d (initial commit)
+{
+  name: 'Чепфа',
+  image: 'chepfa.jpg',
+  link: 'http://chepfa.ru/'
+},
+{
+<<<<<<< HEAD
+  name: 'Южно Уральский Лизинговый Центр',
+  image: 'su-leasing.jpg',
+  link: 'https://su-leasing.ru/'
+},
+{
+  name: 'Первый Вкус',
+  image: 'rossmol.jpg',
+  link: 'https://rossmol.ru/products/brands/?ID=34'
+}
+=======
+  name: 'Первый Вкус',
+  image: 'rossmol.jpg',
+  link: 'https://rossmol.ru/products/brands/?ID=34'
+},
+{
+  name: 'Южно Уральский Лизинговый Центр',
+  image: 'su-leasing.jpg',
+  link: 'https://su-leasing.ru/'
+}
+
+>>>>>>> 05ace0d (initial commit)
+]
+%}
+
+<section class="page__clients clients">
+  <h2 class="clients__title">
+    Нам доверяют
+  </h2>
+  <div class="swiper gallery-slider">
+    <div class="swiper-wrapper">
+      {% for client in clients %}
+        <div class="gallery__item client swiper-slide">
+          <a href="{{client.link}}">
+            <img src="@img/clients/{{client.image}}" alt="{{client.name}}">
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="gallery__controls">
+        <div class="gallery__navigation">
+          <span class="navigation__button navigation-button-prev">
+            <img src="@img/icons/slider-nav-btn.svg" alt="previous-slide"/>
+          </span>
+          <span class="navigation__button navigation-button-next">
+            <img src="@img/icons/slider-nav-btn.svg" alt="next-slide"/>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,23 @@
+<div class="swiper gallery-slider">
+    <div class="swiper-wrapper gallery-wrapper">
+<<<<<<< HEAD
+      {% for img in [1, 2, 3, 4, 5, 6] %}
+=======
+      {% for img in [1, 2, 3, 4, 5, 6, 7, 8] %}
+>>>>>>> 05ace0d (initial commit)
+        <div class="gallery__item swiper-slide">
+          <img src="@img/gallery/gallery-image-{{ loop.index }}.jpg" alt="data-center-image">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="gallery__controls">
+      <div class="gallery__navigation">
+        <span class="navigation__button navigation-button-prev">
+          <img src="@img/icons/slider-nav-btn.svg" alt="previous-slide"/>
+        </span>
+        <span class="navigation__button navigation-button-next">
+          <img src="@img/icons/slider-nav-btn.svg" alt="next-slide"/>
+        </span>
+      </div>
+    </div>
+</div>

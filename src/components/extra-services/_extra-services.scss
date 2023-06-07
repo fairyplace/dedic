@@ -1,0 +1,98 @@
+.additional-services {
+<<<<<<< HEAD
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 60px;
+=======
+  // display: flex;
+  // justify-content: space-between;
+  margin-bottom: 120px;
+  gap: 32px;
+>>>>>>> 05ace0d (initial commit)
+}
+.additional-services__text {
+  flex: 0 2 auto;
+}
+.additional-services__title {
+  margin-bottom: 32px;
+}
+.additional-services__subtitle {
+  margin-bottom: 64px;
+}
+.additional-services__list {
+  flex: 0 1 auto;
+}
+
+.additional-services__list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin-right: 9px;
+  width: 30px;
+  height: 30px;
+  background: url("@img/icons/done_mark.svg") no-repeat center;
+  background-size: contain;
+}
+.service__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.3em;
+  line-height: 120%;
+
+  padding: 16px 16px 16px 55px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: $el-bg-color;
+}
+.service__name {
+  margin-right: 16px;
+}
+.service__price {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1111px) {
+  .additional-services {
+<<<<<<< HEAD
+    flex-direction: column;
+=======
+>>>>>>> 05ace0d (initial commit)
+    margin-bottom: 120px;
+  }
+  .additional-services__list li {
+    font-size: 1.15em;
+  }
+  .additional-services__img {
+    display: none;
+  }
+  .additional-services__subtitle {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 475px) {
+  .additional-services__title {
+    font-size: 2rem;
+  }
+  .service__price {
+    flex-shrink: 1;
+  }
+  .additional-services__list li {
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+@media (max-width: 375px) {
+  .service__item {
+    padding: 12px;
+  }
+  .additional-services__list li:before {
+    display: none;
+  }
+}

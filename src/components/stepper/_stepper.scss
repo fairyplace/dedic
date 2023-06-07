@@ -1,0 +1,123 @@
+.stepper {
+<<<<<<< HEAD
+  margin-bottom: 120px;
+}
+.stepper__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+=======
+  width: fit-content;
+  margin: 0 auto 120px auto;
+}
+.stepper__container {
+  display: flex;
+  flex-direction: column;
+>>>>>>> 05ace0d (initial commit)
+}
+.stepper__title {
+  margin-bottom: 32px;
+}
+.stepper__subtitle {
+  margin-bottom: 64px;
+}
+.stepper__right {
+  flex-shrink: 0;
+}
+.stepper__left {
+  max-width: 620px;
+}
+.stepper-item span {
+  display: block;
+}
+.stepper-item {
+  display: flex;
+  max-width: 600px;
+<<<<<<< HEAD
+  padding: 24px;
+=======
+  padding: 18px;
+>>>>>>> 05ace0d (initial commit)
+  border-radius: 10px;
+  background: linear-gradient(270deg, rgba(58, 44, 86, 0) 0%, rgba(62, 47, 91, 0.488065) 36.17%, #533e7ba9 148.39%);
+}
+.stepper-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.stepper-item::before {
+  z-index: -10;
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  counter-increment: number;
+  content: counter(number) "";
+  color: #a0a3bd;
+  font-weight: 500;
+  transition: all 0.3s;
+<<<<<<< HEAD
+  font-size: 4.5rem;
+}
+.stepper-item__text strong {
+  font-size: 2em;
+=======
+  font-size: 4rem;
+}
+.stepper-item__text strong {
+  font-size: 1.5em;
+>>>>>>> 05ace0d (initial commit)
+  font-weight: 500;
+  line-height: 120%;
+}
+.stepper-item__text p {
+  font-size: 1.15em;
+<<<<<<< HEAD
+  font-weight: 500;
+=======
+  font-weight: 400;
+>>>>>>> 05ace0d (initial commit)
+  line-height: 120%;
+  margin-top: 12px;
+}
+@media (max-width: 1024px) {
+  .stepper__subtitle {
+    margin-bottom: 32px;
+  }
+<<<<<<< HEAD
+  .stepper__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+=======
+>>>>>>> 05ace0d (initial commit)
+  .stepper__img {
+    display: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .stepper__title {
+    font-size: 2rem;
+  }
+  .stepper-item {
+    padding: 16px;
+  }
+  .stepper-item__text strong {
+<<<<<<< HEAD
+    font-size: 1.2em;
+=======
+    font-size: 1.1em;
+>>>>>>> 05ace0d (initial commit)
+    font-weight: 500;
+    line-height: 120%;
+  }
+  .stepper-item__text p {
+    font-size: 1em;
+<<<<<<< HEAD
+    font-weight: 400;
+=======
+>>>>>>> 05ace0d (initial commit)
+    line-height: 120%;
+    margin-top: 12px;
+  }
+}

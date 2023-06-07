@@ -1,0 +1,48 @@
+{% set tariffs = [
+  {
+    price: '3500'
+  },
+  {
+    price: '4500'
+  },
+  {
+    price: '5500'
+  },
+  {
+    price: '6500'
+  }
+] %}
+<section class="tariffs">
+  <h2 class="tariffs__title">
+    Стоимость размещения
+  </h2>
+  <div class="colocation-tariffs-container">
+    {% for t in tariffs %}
+    <div class="colocation-tariff-card">
+      <div class="colocation-tariff-card__size">
+        <span>Размер</span>
+        <div class="colocation-tariff-card__units">
+          <img src="@img/units/{{loop.index}}-unit.svg">
+          <span>{{loop.index}}U</span>
+        </div>
+      </div>
+      <div class="tariff-card__price">
+        от
+        <span>{{t.price}}</span>
+        / месяц
+      </div>
+      <ul class="colocation-parameters-list">
+        <li>1 IPv4</li>
+        <li>100 Мбит/с</li>
+      </ul>
+<<<<<<< HEAD
+      <a href="" class="tariff-card__button main-button">Заказать</a>
+=======
+      <a href="colocation-config-{{loop.index}}.html" class="tariff-card__button main-button">Заказать</a>
+>>>>>>> 05ace0d (initial commit)
+    </div>
+    {% endfor %}
+
+
+  </div>
+</section>

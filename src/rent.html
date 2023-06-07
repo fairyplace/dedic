@@ -1,0 +1,146 @@
+<<<<<<< HEAD
+{% set options = [
+  'Бесплатное тестирование сервера до 30 дней',
+  'Бесперебойное энергоснабжение — 99% SLA',
+  'Гарантия безопасности и конфиденциальности информации',
+  'Внешний и внутренний аудит безопасности Ваших данных' 
+=======
+{% extends 'templates/service-page/service-page.html' %}
+
+{% set pageTitle = 'Аренда сервера | Первый Дата-Центр' %}
+
+{% set heroContent = {
+  title: 'Аренда сервера',
+  subtitle: 'Выберите конфигурацию сервера для решения ваших задач',
+  image: '@img/image/rent_img.svg',
+  goto: '.tariffs',
+  linkText: 'Выбрать тариф'
+} %}
+
+{% set options = [
+  'Бесплатное тестирование сервера до 30 дней',
+  'Бесперебойное энергоснабжение от двух независимых систем',
+  'Неограниченный сетевой канал доступа 100 Мбит\с (интернет)',
+  'Система защиты удаленного доступа и уязвимости ОС (2FA)',
+  'Предоставление публичного IP-адреса (IPv4 / IPv6)' 
+>>>>>>> 05ace0d (initial commit)
+] %}
+
+{% set services = [
+  {
+    name: "Администрирование сервера",
+    price: "1500"
+  },
+  {
+    name: "Служба информационной безопасности (ISS)",
+    price: "3000"
+  },
+  {
+    name: "Мониторинг доступности",
+    price: "1000"
+  },
+  {
+    name: "Выделенный канал до 100 Гбит\с",
+    price: "5000"
+  },
+  {
+    name: "Бэкапы (резервное копирование)",
+    price: "1000"
+  },
+  {
+    name: "Дополнительный адрес IPv4/ IPv6",
+    price: "200"
+  },
+  {
+    name: "Пакет услуг Smart Hands",
+    price: "9500"
+  },
+  {
+    name: "Предоставление VLAN",
+    price: "500"
+  }
+] %}
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ru">
+  {% set pageTitle = 'Аренда сервера | Первый Дата-Центр' %}
+  {% include 'components/head.html' %}
+  <body>
+    <div class="wrapper">
+      {% include 'components/header/header.html' %}
+      <main>
+        <div class="container">
+          {% set heroContent = {
+            title: 'Аренда сервера',
+            subtitle: 'Выберите конфигурацию сервера для решения ваших задач',
+            image: '@img/image/rent_img.svg',
+            goto: '.tariffs',
+            linkText: 'Выбрать тариф'
+          } %}
+          {% include 'components/service-hero/service-hero.html' %}
+          {% include 'components/service-options/service-option.html' %}
+
+          <div class="change-info">
+            <h3>Оперативное изменение конфигурации сервера</h3>
+            <p>При необходимости вы сможете изменить конфигурацию заказанного оборудования обратившись в поддержку. Изменения
+              предоставляются в режиме реального времени а оформление и оплата производится позже..</p>
+          </div>
+          {% include 'components/extra-services/extra-services.html' %}
+          {% include 'components/tariff-cards/__rent/tariff-cards__rent.html' %}
+
+
+          {% set stepper = {
+              title: 'Как арендовать сервер в Первом Дата Центре',
+              subtitle: 'Самый простой путь арендовать сервер — обратиться к нам'
+            } %}
+          {% include 'components/stepper/stepper.html' %}
+        </div>
+      </main>
+      {% include 'components/footer/footer.html' %}
+    </div>
+    {% include 'components/script.html' %}
+  </body>
+</html>
+=======
+
+{% block servicePageContent %}
+
+  {% include 'components/service-hero/service-hero.html' %}
+
+  {% include 'components/service-options/service-option.html' %}
+
+  {# <div class="change-info">
+    <h3>Оперативное изменение конфигурации сервера</h3>
+    <p>При необходимости вы сможете изменить конфигурацию заказанного оборудования обратившись в поддержку. Изменения
+      предоставляются в режиме реального времени а оформление и оплата производится позже..
+    </p>
+  </div> #}
+
+  {% include 'components/extra-services/extra-services.html' %}
+
+  {% include 'components/tariff-cards/__rent/tariff-cards__rent.html' %}
+
+  {% set stepper = {
+      title: 'Как арендовать сервер в Первом Дата Центре',
+      subtitle: 'Самый простой путь арендовать сервер — обратиться к нам'
+    } %}
+
+  {% set steps = [
+    {
+      title: 'Отправьте заявку',
+      text: 'Заполните форму с заявкой на аренду сервера, укажите все параметры и отправьте её нам'
+    },
+    {
+      title: 'Подпишите договор и оплатите счет',
+      text: 'Заполним и вышлем договор на согласование'
+    },
+    {
+      title: 'Сервер в Вашем распоряжении',
+      text: 'Получите логин и пароль, используйте все возможности сервера и подключайте дополнительные услуги'
+    }
+  ]
+  %}
+  {% include 'components/stepper/stepper.html' %}
+
+{% endblock servicePageContent %}
+>>>>>>> 05ace0d (initial commit)

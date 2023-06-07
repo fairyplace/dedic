@@ -1,0 +1,53 @@
+{% import '../__components/form__components.html' as form %}
+<form method="POST" class="form main-form" name="main">
+  <div class="main-form__content form__content">
+
+    <div class="main-form__header">
+      <h3 class="main-form__title">Свяжитесь с нами</h3>
+      <div class="main-form__subtitle">
+        <p>Хотите задать вопрос?</p>
+        <p>Получить коммерческое предложение?</p>
+        <p>Уточнить конфигурацию?</p>
+      </div>
+    </div>
+
+    {{ form.input_field(label = 'Ваше имя',type='text', name='name', required='required', addAttr='maxLength=32') }}
+
+    {{ form.input_field(
+      label = 'Ваш номер телефона',
+      type='tel',
+      name='phone',
+      required='required',  
+      addAttr = 'data-tel-input'
+    ) }}
+  
+    {# name - name of attr, label - name of option #}
+
+    {{ form.check_field(label = 'Какая услуга вас интересует?', 
+      options = [
+        {
+          name:'rent',
+          label:'Аренда'
+        }, 
+        {
+          name:'colocation',
+          label:'Размещение'
+        },
+        {
+          name:'other',
+          label:'Другое'
+        }
+      ]) }}
+
+    {{ form.textarea_field(
+      label = 'Напишите вопрос, описание проекта',
+      name = 'message',
+      maxlength = '255'
+    ) }}
+
+    {{ form.privacy_terms()}}
+    {{ form.submit_button() }}
+  </div>
+</form>
+{{ form.form_modal(title = 'Спасибо!', message= 'Ваше обращение успешно отправлено. Наш специалист свяжется с Вами в течение 15 минут.', id='success') }}
+{{ form.form_modal(title = 'Что-то пошло не так...', message= 'Ваше обращение не было отправлено по техническим причинам, пожалуйста, попробуйте ещё раз', id='error') }}

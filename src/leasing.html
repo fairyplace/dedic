@@ -1,0 +1,140 @@
+<<<<<<< HEAD
+{% set options = [
+  'Бесплатное тестирование сервера до 30 дней',
+  'Бесперебойное энергоснабжение — 99% SLA',
+  'Гарантия безопасности и конфиденциальности информации',
+  'Внешний и внутренний аудит безопасности Ваших данных' 
+] %}
+{% set services = [
+  {
+    name: "Администрирование сервера",
+    price: "1500"
+  },
+  {
+    name: "Служба информационной безопасности (ISS)",
+    price: "3000"
+  },
+  {
+    name: "Мониторинг доступности",
+    price: "1000"
+  },
+  {
+    name: "Выделенный канал до 100 Гбит\с",
+    price: "5000"
+  },
+  {
+    name: "Бэкапы (резервное копирование)",
+    price: "1000"
+  },
+  {
+    name: "Дополнительный адрес IPv4/ IPv6",
+    price: "200"
+  },
+  {
+    name: "Пакет услуг Smart Hands",
+    price: "9500"
+  },
+  {
+    name: "Предоставление VLAN",
+    price: "500"
+  }
+] %}
+<!DOCTYPE html>
+<html lang="ru">
+  {% set pageTitle = 'Купить сервер в лизинг | Первый Дата-Центр' %}
+  {% include 'components/head.html' %}
+  <body>
+    <div class="wrapper">
+      {%include 'components/header/header.html'%}
+      <main>
+        <div class="container">
+          {% set heroContent = {
+            title: 'Сервер в лизинг',
+            subtitle: 'Предлагаем Вам приобрести в собственность современное серверное оборудование по программе «Лизинг 24»!',
+            image: '@img/image/leasing_img.svg',
+            goto: '.tariffs',
+            linkText: 'Выбрать тариф'
+           }
+           %}
+          {% include 'components/service-hero/service-hero.html' %}
+          {% include 'components/service-options/service-option.html' %}
+          {% include 'components/extra-services/extra-services.html' %}
+          {% include 'components/tariff-cards/__rent/tariff-cards__rent.html' %}
+          {% set stepper = {
+              title: 'Как приобрести сервер в лизинг, в Первом Дата-Центре',
+              subtitle: 'Самый простой путь арендовать сервер — обратиться к нам'
+            } %}
+          {% include 'components/stepper/stepper.html' %}
+        </div>
+      </main>
+      {% include 'components/footer/footer.html' %}
+    </div>
+    {% include 'components/script.html' %}
+  </body>
+</html>
+=======
+{% extends 'templates/service-page/service-page.html' %}
+
+{% set pageTitle = 'Сервер в лизинг | Первый Дата-Центр' %}
+
+{% set heroContent = {
+  title: 'Сервер в лизинг',
+  subtitle: 'Приобретение в собственность серверного оборудования на условиях долгосрочного выкупа',
+
+  image: '@img/image/leasing_img.svg',
+  goto: '.tariffs',
+  linkText: 'Выбрать тариф'
+}
+%}
+
+{% block servicePageContent %}
+
+  {% include 'components/service-hero/service-hero.html' %}
+
+  <div class="page__leasing-terms leasing-terms">
+    <h2 class="leasing-terms__title">Условия лизинга</h2>
+    <p class="leasing-terms__text">
+      Оборудование приобретается без первоначального взноса, далее равными ежемесячными
+      платежами оплачивается стоимость оборудования и его размещение в дата-центре.
+    </p>
+    <ul class="leasing-terms__terms-list">
+      <li class="terms-item">Удорожание вашего оборудования не превысит 7,5% в год</li>
+      <li class="terms-item">Вы в праве досрочно погасить полную стоимость оборудования</li>
+      <li class="terms-item">По факту полной выплаты стоимости оборудование переходит в Вашу собственность</li>
+    </ul>
+    <h3>Наши гарантии</h3>
+    <ul class="leasing-terms__guarantees-list">
+      <li class="guarantees-item">Стабильное энергоснабжение</li>
+      <li class="guarantees-item">Высокоскоростное сетевое соединение</li>
+      <li class="guarantees-item">Гарантийное обслуживание и сохранность вашего оборудования</li>
+      <li class="guarantees-item">Оперативная реакция нашего персонала на любые внештатные и аварийные ситуации</li>
+    </ul>
+    <p class="leasing-terms__text">На правах собственника, Вы можете оформить договор на размещение оборудования в нашем дата-центре и продолжить использовать его технические возможности и наши ресурсы для решения своих задач.</p>
+  </div>
+
+  {% include 'components/tariff-cards/__leasing/tariff-cards__leasing.html' %}
+
+  {% set stepper = {
+    title: 'Как приобрести сервер в лизинг в Первом Дата Центре',
+    subtitle: 'Самый простой путь приобрести сервер в лизинг — обратиться к нам'
+  }
+  %}
+  {% set steps = [
+    {
+      title: 'Отправьте заявку',
+      text: 'Выберите конфигурацию, заполните форму с заявкой на приобретение сервера в лизинг, укажите все параметры и отправьте её нам'
+    },
+    {
+      title: 'Подпишите договор и оплатите счет',
+      text: 'Заполним и вышлем договор на согласование'
+    },
+    {
+      title: 'Сервер в Вашем распоряжении',
+      text: 'Получите логин и пароль, используйте все возможности сервера и подключайте дополнительные услуги'
+    }
+  ]
+  %}
+  {% include 'components/stepper/stepper.html' %}
+
+{% endblock servicePageContent %}
+>>>>>>> 05ace0d (initial commit)

@@ -1,0 +1,19 @@
+
+{% set pageTitle = 'Аренда сервера E3-1220 | Первый Дата-Центр' %}
+{% set configTitle = 'Аренда сервера E3-1220' %}
+{% set params = [
+  {
+    name: 'CPU',
+    value: 'Intel Xeon E3-1220, 4 ядра'
+  },
+  {
+    name: 'RAM',
+    value: '8 GB RAM, DDR3'
+  },
+  {
+    name: 'Диски',
+    value: 'SSD 256GB'
+  }
+] %}
+{% set price = '4800' %}
+{% extends 'templates/order-page/order-page.html' %}

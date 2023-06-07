@@ -1,0 +1,24 @@
+.main-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1em 2.2em;
+  // background: linear-gradient(246.08deg, #706EE7 -5.77%, #726CE4 56.65%, #8F57BD 119.07%);;
+  // background: #706EE7;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 24px;
+
+  border:2.5px solid #0000;
+  border-radius:10px;
+  background: #706DE6;
+  transition: all 0.15s;
+}
+@media (min-width: 1024px) {
+  .main-button:hover{
+    background: transparent;
+    border: 2.5px solid #706EE7;
+    filter: drop-shadow(0px 0px 6px rgba(100, 147, 227, 0.84));
+  }
+}
